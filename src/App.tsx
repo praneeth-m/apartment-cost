@@ -40,38 +40,52 @@ function App() {
     const total2 = DOCS + area * CORPUS + area * MAINTENANCE
     const total1GST = (total1 * GST1) / 100
     const total2GST = (total2 * GST2) / 100
-    const total = total1 + total2 + total1GST + total2GST
-    setCost(total.toString())
+    const total = Math.trunc(total1 + total2 + total1GST + total2GST)
+    // setCost(total.toString())
+    //display price in indian currency format with commas
+    setCost(total.toLocaleString('en-IN')) // 1,23,456
   }
 
   return (
     <>
       <ThemeProvider theme={baseTheme}>
-        <h1>Grava</h1>
-        <div className='card'></div>
-        <TextField
-          fullWidth
-          id='Sqft'
-          name='area'
-          label='area'
-          variant='outlined'
-          value={area}
-          onChange={(e) => setArea(Number(e.target.value))}
-        />
-        <TextField
-          fullWidth
-          id='Floor'
-          name='floor'
-          label='floor'
-          variant='outlined'
-          value={floor}
-          onChange={(e) => setFloor(Number(e.target.value))}
-        />
-        <Button variant='outlined' type='submit' onClick={calculateCost}>
-          Submit
-        </Button>
-
-        <h1>Cost: {cost}</h1>
+        <h1 className='m-10'>Grava Cost Calculator</h1>
+        <div className='card m-10'>
+          <TextField
+            className='mb-4'
+            type='number'
+            fullWidth
+            id='Sqft'
+            name='area'
+            label='Area'
+            variant='outlined'
+            value={area}
+            onChange={(e) => setArea(Number(e.target.value))}
+          />
+          <TextField
+            className='mb-4'
+            type='number'
+            fullWidth
+            id='Floor'
+            name='floor'
+            label='Floor'
+            variant='outlined'
+            value={floor}
+            onChange={(e) => setFloor(Number(e.target.value))}
+          />
+          <Button variant='outlined' type='submit' onClick={calculateCost}>
+            Submit
+          </Button>
+          <Button
+            className='ml-2'
+            variant='outlined'
+            type='submit'
+            onClick={() => setCost('')}
+          >
+            Reset
+          </Button>
+          {cost && <h1 className='mt-10 text-blue-500'>Rs. {cost}</h1>}
+        </div>
       </ThemeProvider>
     </>
   )
