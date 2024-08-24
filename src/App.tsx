@@ -31,6 +31,17 @@ function App() {
   const [cost, setCost] = useState('')
 
   const calculateCost = () => {
+    if (area < 4365) {
+      setCost('')
+      alert('Smallest area is 4365 sqft')
+      return
+    }
+    if (floor < 1) {
+      setCost('')
+      alert('Invalid floor')
+      return
+    }
+
     const total1 =
       area * BASE_PRICE +
       (floor - 6) * (FLOOR_RISE * area) +
