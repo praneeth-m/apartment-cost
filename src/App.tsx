@@ -7,7 +7,7 @@ const baseTheme = createTheme({
     primary: {
       // light: will be calculated from palette.primary.main,
       main: '#00837E',
-      secondary: '#FF6C36',
+      // secondary: '#FF6C36',
       // dark: will be calculated from palette.primary.main,
       contrastText: '#ffffff',
     },
@@ -41,7 +41,7 @@ function App() {
     const total1GST = (total1 * GST1) / 100
     const total2GST = (total2 * GST2) / 100
     const total = total1 + total2 + total1GST + total2GST
-    setCost(total)
+    setCost(total.toString())
   }
 
   return (
@@ -56,7 +56,7 @@ function App() {
           label='area'
           variant='outlined'
           value={area}
-          onChange={(e) => setArea(e.target.value)}
+          onChange={(e) => setArea(Number(e.target.value))}
         />
         <TextField
           fullWidth
@@ -65,7 +65,7 @@ function App() {
           label='floor'
           variant='outlined'
           value={floor}
-          onChange={(e) => setFloor(e.target.value)}
+          onChange={(e) => setFloor(Number(e.target.value))}
         />
         <Button variant='outlined' type='submit' onClick={calculateCost}>
           Submit
