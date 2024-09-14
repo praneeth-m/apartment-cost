@@ -128,7 +128,8 @@ function App() {
                   {numParkingSpots}
                 </span>{' '}
                 parking spots with Option A (2 spots on Basement Level I and{' '}
-                {numParkingSpots - 2} spots on Basement level IV)
+                {numParkingSpots - 2} spot{numParkingSpots - 2 > 1 ? 's' : ''}{' '}
+                on Basement level IV)
               </h4>
             </div>
           )}
