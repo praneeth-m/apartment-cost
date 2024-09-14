@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import { TextField, Button, Select } from '@mui/material'
+import { TextField, Button } from '@mui/material'
 
 const baseTheme = createTheme({
   palette: {
