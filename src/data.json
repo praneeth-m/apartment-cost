@@ -1,0 +1,120 @@
+{
+  "towers": [
+    {
+      "number": 2,
+      "units": [
+        {
+          "number": 1,
+          "area": 4685,
+          "facing": "East",
+          "hasHomeTheatre": false
+        },
+        {
+          "number": 2,
+          "area": 5400,
+          "facing": "West",
+          "hasHomeTheatre": true
+        },
+        {
+          "number": 3,
+          "area": 5400,
+          "facing": "East",
+          "hasHomeTheatre": true
+        },
+        {
+          "number": 4,
+          "area": 4615,
+          "facing": "West",
+          "hasHomeTheatre": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "units": [
+        {
+          "number": 1,
+          "area": 5190,
+          "facing": "East",
+          "hasHomeTheatre": true
+        },
+        {
+          "number": 2,
+          "area": 5190,
+          "facing": "West",
+          "hasHomeTheatre": true
+        },
+        {
+          "number": 3,
+          "area": 4410,
+          "facing": "East",
+          "hasHomeTheatre": false
+        },
+        {
+          "number": 4,
+          "area": 4365,
+          "facing": "West",
+          "hasHomeTheatre": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "units": [
+        {
+          "number": 1,
+          "area": 5685,
+          "facing": "East",
+          "hasHomeTheatre": true
+        },
+        {
+          "number": 2,
+          "area": 5400,
+          "facing": "West",
+          "hasHomeTheatre": true
+        },
+        {
+          "number": 3,
+          "area": 4410,
+          "facing": "East",
+          "hasHomeTheatre": false
+        },
+        {
+          "number": 4,
+          "area": 4365,
+          "facing": "West",
+          "hasHomeTheatre": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "units": [
+        {
+          "number": 1,
+          "area": 5685,
+          "facing": "East",
+          "hasHomeTheatre": true
+        },
+        {
+          "number": 2,
+          "area": 5400,
+          "facing": "West",
+          "hasHomeTheatre": true
+        },
+        {
+          "number": 3,
+          "area": 4410,
+          "facing": "East",
+          "hasHomeTheatre": false
+        },
+        {
+          "number": 4,
+          "area": 4365,
+          "facing": "West",
+          "hasHomeTheatre": false
+        }
+      ]
+    }
+  ]
+}
