@@ -12,7 +12,6 @@ import {
   FormControl,
   MenuItem,
   InputLabel,
-  Box,
 } from '@mui/material'
 import Select, { SelectChangeEvent } from '@mui/material/Select'
 import TableCell, { tableCellClasses } from '@mui/material/TableCell'
