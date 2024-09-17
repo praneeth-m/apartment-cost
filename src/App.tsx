@@ -34,7 +34,7 @@ function App() {
           />
           <br></br>
           <br></br>
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <Apartment />
             {comparing && <Apartment />}
           </div>

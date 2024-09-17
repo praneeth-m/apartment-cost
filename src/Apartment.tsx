@@ -169,44 +169,44 @@ function Apartment() {
   return (
     <>
       <ThemeProvider theme={baseTheme}>
-        <div className='card m-10'>
-          <Box sx={{ minWidth: 120 }}>
-            <FormControl fullWidth>
-              <InputLabel id='demo-simple-select-label'>Tower</InputLabel>
-              <Select
-                labelId='tower'
-                id='tower'
-                value={(tower?.number ?? 0).toString()}
-                label='Tower'
-                onChange={handleTowerChange}
-              >
-                {data.towers.map((tower) => (
-                  <MenuItem key={tower.number} value={tower.number}>
-                    Tower {tower.number}
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
-          </Box>
+        <div className='card m-1'>
+          <FormControl fullWidth>
+            <InputLabel id='demo-simple-select-label'>Tower</InputLabel>
+            <Select
+              labelId='tower'
+              id='tower'
+              value={(tower?.number ?? 0).toString()}
+              label='Tower'
+              onChange={handleTowerChange}
+            >
+              {data.towers.map((tower) => (
+                <MenuItem key={tower.number} value={tower.number}>
+                  Tower {tower.number}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+
           <br></br>
-          <Box sx={{ minWidth: 120 }}>
-            <FormControl fullWidth>
-              <InputLabel id='unit'>Unit</InputLabel>
-              <Select
-                labelId='unit'
-                id='unit'
-                value={(unit?.number ?? 0).toString()}
-                label='Unit'
-                onChange={handleUnitChange}
-              >
-                {tower?.['units'].map((unit) => (
-                  <MenuItem key={unit.number} value={unit?.number ?? 0}>
-                    Unit #{unit.number}
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
-          </Box>
+          <br></br>
+
+          <FormControl fullWidth>
+            <InputLabel id='unit'>Unit</InputLabel>
+            <Select
+              labelId='unit'
+              id='unit'
+              value={(unit?.number ?? 0).toString()}
+              label='Unit'
+              onChange={handleUnitChange}
+            >
+              {tower?.['units'].map((unit) => (
+                <MenuItem key={unit.number} value={unit?.number ?? 0}>
+                  Unit #{unit.number}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+
           <div>
             {unit ? (
               <div>
